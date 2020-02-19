@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+
+    <style>
+        #a1,#a2,#b4,#b5{
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+            padding: 40px;
+        }
+        #a3,#b6{
+            border-bottom: 1px solid;
+            padding: 40px; 
+        }
+        #c7,#c8{
+            border-right: 1px solid;
+            padding: 40px;
+        }
+        #canvas{
+            padding: 20px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turn : <b>{{.val}}</b></h1>
+    <table id="canvas">
+        <tr>
+            <td id="a1"><a href="localhost:8080/tictactoe/{{.val}}">{{.a1}}</a></td>
+            <td id="a2">{{.a2}}</td>
+            <td id="a3">{{.a3}}</td>
+        </tr>
+        <tr>
+            <td id="b1">{{.b1}}</td>
+            <td id="b2">{{.b2}}</td>
+            <td id="b3">{{.b3}}</td>
+        </tr>
+        <tr>
+            <td id="c1">{{.c1}}</td >
+            <td id="c2">{{.c2}}</td>
+            <td id="c3">{{.c3}}</td>
+        </tr>
+    </table>
+</body>
+<script>
+    let a = document.getElementsByTagName(b).innerHTML;
+    $('#canvas').on("click", "td", function() {
+        $(this).innerHTML = a;
+    });
+</script>
+</html>
