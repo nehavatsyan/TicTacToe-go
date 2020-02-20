@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
-        #a1,#a2,#b4,#b5{
+        #a1,#a2,#b1,#b2{
             border-right: 1px solid;
             border-bottom: 1px solid;
             padding: 40px;
         }
-        #a3,#b6{
+        #a3,#b3{
             border-bottom: 1px solid;
             padding: 40px; 
         }
-        #c7,#c8{
+        #c1,#c2{
             border-right: 1px solid;
+            padding: 40px;
+        }
+        #c3 {
             padding: 40px;
         }
         #canvas{
@@ -27,10 +31,10 @@
     </style>
 </head>
 <body>
-    <h1>Turn : <b>{{.val}}</b></h1>
+    <h1>Turn : <b id="turnVal">{{.val}}</b></h1>
     <table id="canvas">
         <tr>
-            <td id="a1"><a href="localhost:8080/tictactoe/{{.val}}">{{.a1}}</a></td>
+            <td id="a1">{{.a1}}</td>
             <td id="a2">{{.a2}}</td>
             <td id="a3">{{.a3}}</td>
         </tr>
@@ -47,9 +51,30 @@
     </table>
 </body>
 <script>
-    let a = document.getElementsByTagName(b).innerHTML;
+    let turn = document.getElementById("turnVal").innerHTML;
+    //console.log(a);;
     $('#canvas').on("click", "td", function() {
-        $(this).innerHTML = a;
+        this.innerHTML = turn;
+        let a = [];
+        a[0]=document.getElementById("a1").innerHTML;
+        a[1]=document.getElementById("a2").innerHTML;
+        a[2]=document.getElementById("a3").innerHTML;
+        a[3]=document.getElementById("b1").innerHTML;
+        a[4]=document.getElementById("b2").innerHTML;
+        a[5]=document.getElementById("b3").innerHTML;
+        a[6]=document.getElementById("c1").innerHTML;
+        a[7]=document.getElementById("c2").innerHTML;
+        a[8]=document.getElementById("c3").innerHTML;
+        if(turn=="x"){
+            turn = "o";
+        }else{
+            turn = "x";
+        }
+        url =  "http://localhost:8080/tictactoe/"+turn+"/"+a[0]+"/"+a[1]+"/"+a[2]+"/"+a[3]+"/"+a[4]+"/"+a[5]+"/"+a[6]+"/"+a[7]+"/"+a[8];
+        //console.log(url);
+        location.href = url;
+        /* window.location = url;*/
+        //window.open(url); 
     });
 </script>
 </html>
