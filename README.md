@@ -6,3 +6,11 @@ Tic Tac Toe, or Noughts and Crosses for the rest of the world, is a nice simple 
 ![Tic Tac Toe](https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/200px-Tic_tac_toe.svg.png)
 
 *Image source: Wikipedia*
+
+
+To run this app :
+
+- You must have Golang installed in your system 
+- In terminal, Change directory to TicTacToe-go 
+- Type command go run main.go
+- open 
