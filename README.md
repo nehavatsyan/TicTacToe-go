@@ -13,4 +13,4 @@ To run this app :
 - You must have Golang installed in your system 
 - In terminal, Change directory to TicTacToe-go 
 - Type command go run main.go
-- open 
+- open main.html in browser and you are ready to enter API
