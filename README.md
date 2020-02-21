@@ -8,7 +8,7 @@ Tic Tac Toe, or Noughts and Crosses for the rest of the world, is a nice simple 
 *Image source: Wikipedia*
 
 
-To run this app :
+To run this api :
 
 - You must have Golang installed in your system 
 - In terminal, Change directory to TicTacToe-go 
